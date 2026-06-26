@@ -9,29 +9,46 @@
     :root{--bg:#fff;--fg:#000;--muted:#6b6b6b;--line:#e5e5e5}
     *{box-sizing:border-box;margin:0;padding:0}
     html,body{height:100%;background:var(--bg);color:var(--fg);font-family:"Montserrat",sans-serif}
-    .nav{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;justify-content:space-between;align-items:center;padding:22px 32px;background:rgba(255,255,255,.7);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+    a{color:inherit;text-decoration:none}
+
+    .nav{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;justify-content:space-between;align-items:center;padding:22px 32px;background:rgba(255,255,255,.85);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
     .logo{font-weight:700;letter-spacing:.14em;font-size:20px;text-transform:uppercase}
-    .nav-cta{font-size:11px;text-transform:uppercase;letter-spacing:.2em;font-weight:500;border:1px solid #000;padding:10px 16px;border-radius:999px}
+    .nav-cta{font-size:11px;text-transform:uppercase;letter-spacing:.2em;font-weight:500;border:1px solid #000;padding:10px 16px;border-radius:999px;transition:.2s}
     .nav-cta:hover{background:#000;color:#fff}
-    .hero{position:relative;height:100svh;width:100%;overflow:hidden}
-    .hero video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2}
-    .hero::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(to top,rgba(255,255,255,.92)0%,rgba(255,255,255,.75)35%,rgba(255,255,255,.45)70%,rgba(255,255,255,.25)100%)}
-    .hero-content{position:relative;height:100%;display:grid;place-items:center;text-align:center;padding:0 24px}
+
+    .hero{position:relative;height:100svh;width:100%;overflow:hidden;isolation:isolate;background:#fff}
+    .hero video{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;z-index:0;pointer-events:none}
+    .hero::after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(to top,rgba(255,255,255,.92)0%,rgba(255,255,255,.75)35%,rgba(255,255,255,.45)70%,rgba(255,255,255,.25)100%)}
+    .hero-content{position:relative;z-index:2;height:100%;display:grid;place-items:center;text-align:center;padding:0 24px}
     .eyebrow{font-size:11px;letter-spacing:.32em;text-transform:uppercase;color:var(--muted);margin-bottom:18px;font-weight:500}
     h1{font-weight:700;font-size:clamp(48px,9vw,128px);line-height:.9;letter-spacing:.02em;text-transform:uppercase}
     .tagline{margin-top:18px;font-size:clamp(14px,1.5vw,17px);color:#1a1a1a}
     .cta-row{margin-top:36px;display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
-    .btn{padding:14px 24px;font-size:12px;letter-spacing:.18em;text-transform:uppercase;font-weight:600;border:1.5px solid #000;background:transparent}
-    .btn:hover{background:#000;color:#fff}
+    .btn{padding:14px 24px;font-size:12px;letter-spacing:.18em;text-transform:uppercase;font-weight:600;border:1.5px solid #000;background:transparent;transition:.15s}
+    .btn:hover{background:#000;color:#fff;transform:translateY(-1px)}
     .btn.primary{background:#000;color:#fff}
     .btn.primary:hover{background:#fff;color:#000}
+
+    .meaning{padding:120px 24px;border-top:1px solid var(--line);background:#fff}
+    .meaning .wrap{max-width:860px;margin:0 auto;text-align:center}
+    .meaning h2{font-size:clamp(32px,5vw,56px);font-weight:700;text-transform:uppercase;letter-spacing:.04em;line-height:1.1}
+    .meaning h2 span{display:block;font-size:13px;font-weight:500;color:var(--muted);letter-spacing:.28em;margin-top:10px;text-transform:uppercase}
+    .meaning p{margin-top:28px;font-size:clamp(16px,1.9vw,19px);line-height:1.75;color:#111;font-weight:400}
+    .meaning p strong{font-weight:600}
+
+    @media(max-width:640px){
+      .nav{padding:16px 18px}
+      .meaning{padding:80px 20px}
+    }
   </style>
 </head>
 <body>
   <header class="nav"><div class="logo">CRESCITA</div><a class="nav-cta" href="#shop">Shop Drop 001</a></header>
   <main>
     <section class="hero">
-      <video autoplay muted loop playsinline preload="metadata"><source src="hero.mp4" type="video/mp4"></video>
+      <video autoplay muted loop playsinline webkit-playsinline preload="auto" poster="poster.jpg">
+        <source src="./hero.mp4" type="video/mp4" />
+      </video>
       <div class="hero-content">
         <div>
           <div class="eyebrow">Est. 2026 — Durban / Worldwide</div>
@@ -43,17 +60,18 @@
         </div>
       </div>
     </section>
-<section class="meaning" id="meaning">
-  <div class="wrap">
-    <h2>
-      Crescita
-      <span>(kreh-SHEE-tah)</span>
-    </h2>
-    <p>
-      <strong>Crescita</strong> is an Italian word meaning <strong>growth, becoming, development, and continuous progress</strong>. It represents the belief that we are never a finished product — that every day is another opportunity to grow in faith, character, discipline, purpose, and ambition.
-    </p>
-  </div>
-</section>
+
+    <section class="meaning" id="meaning">
+      <div class="wrap">
+        <h2>
+          Crescita
+          <span>(kreh-SHEE-tah)</span>
+        </h2>
+        <p>
+          <strong>Crescita</strong> is an Italian word meaning <strong>growth, becoming, development, and continuous progress</strong>. It represents the belief that we are never a finished product — that every day is another opportunity to grow in faith, character, discipline, purpose, and ambition.
+        </p>
+      </div>
+    </section>
   </main>
 </body>
 </html>
