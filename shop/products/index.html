@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Shop — CRESCITA</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#fff;--fg:#000;--muted:#6b6b6b;--line:#e5e5e5}
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{background:var(--bg);color:var(--fg);font-family:"Montserrat",sans-serif}
+    a{color:inherit;text-decoration:none}
+    .nav{position:sticky;top:0;z-index:50;display:flex;justify-content:space-between;align-items:center;padding:22px 32px;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+    .logo{font-weight:700;letter-spacing:.14em;text-transform:uppercase;font-size:18px}
+    .wrap{max-width:1280px;margin:0 auto;padding:80px 24px}
+    h1{font-size:clamp(32px,5vw,56px);font-weight:700;text-transform:uppercase;letter-spacing:.04em}
+    .sub{color:var(--muted);font-size:12px;letter-spacing:.22em;text-transform:uppercase;margin:12px 0 56px}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:28px}
+    .card{border:1px solid var(--line);display:block;transition:transform .18s ease}
+    .card:hover{transform:translateY(-4px)}
+    .card img{width:100%;aspect-ratio:4/5;object-fit:cover;display:block;background:#f2f2f2}
+    .card-body{padding:16px 14px;border-top:1px solid var(--line)}
+    .name{font-weight:600;text-transform:uppercase;font-size:12px;letter-spacing:.1em}
+    .price{margin-top:6px;font-size:13px}
+    .tag{margin-top:8px;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+    footer{border-top:1px solid var(--line);padding:40px 24px;text-align:center;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-top:80px}
+  </style>
+</head>
+<body>
+  <header class="nav">
+    <a href="/" class="logo">CRESCITA</a>
+    <a href="/">Home</a>
+  </header>
+
+  <main class="wrap">
+    <h1>Collection 001</h1>
+    <div class="sub">Growth / Becoming / Continuous Progress</div>
+
+    <div class="grid">
+      <a href="/shop/products/tee-001.html" class="card">
+        <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?q=80&w=800&auto=format&fit=crop" alt="Tee 001">
+        <div class="card-body">
+          <div class="name">Tee 001 — Growth</div>
+          <div class="price">R 850</div>
+          <div class="tag">Heavyweight 240gsm</div>
+        </div>
+      </a>
+
+      <a href="/shop/products/tee-002.html" class="card">
+        <img src="https://images.unsplash.com/photo-1503341504253-dff4815485f1?q=80&w=800&auto=format&fit=crop" alt="Tee 002">
+        <div class="card-body">
+          <div class="name">Tee 002 — Discipline</div>
+          <div class="price">R 850</div>
+          <div class="tag">Heavyweight 240gsm</div>
+        </div>
+      </a>
+
+      <a href="/shop/products/hoodie-001.html" class="card">
+        <img src="https://images.unsplash.com/photo-1578768079052-aa76e52ff102?q=80&w=800&auto=format&fit=crop" alt="Hoodie 001">
+        <div class="card-body">
+          <div class="name">Hoodie 001 — Purpose</div>
+          <div class="price">R 1,650</div>
+          <div class="tag">450gsm French Terry</div>
+        </div>
+      </a>
+
+      <a href="/shop/products/hoodie-002.html" class="card">
+        <img src="https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?q=80&w=800&auto=format&fit=crop" alt="Hoodie 002">
+        <div class="card-body">
+          <div class="name">Hoodie 002 — Character</div>
+          <div class="price">R 1,650</div>
+          <div class="tag">450gsm French Terry</div>
+        </div>
+      </a>
+
+      <a href="/shop/products/cap-001.html" class="card">
+        <img src="https://images.unsplash.com/photo-1588850561407-ed78c282e89b?q=80&w=800&auto=format&fit=crop" alt="Cap 001">
+        <div class="card-body">
+          <div class="name">Cap 001 — Faith</div>
+          <div class="price">R 550</div>
+          <div class="tag">6-Panel Wool</div>
+        </div>
+      </a>
+
+      <a href="/shop/products/pants-001.html" class="card">
+        <img src="https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?q=80&w=800&auto=format&fit=crop" alt="Pants 001">
+        <div class="card-body">
+          <div class="name">Pants 001 — Ambition</div>
+          <div class="price">R 1,450</div>
+          <div class="tag">Relaxed Cargo</div>
+        </div>
+      </a>
+    </div>
+  </main>
+
+  <footer>© 2026 CRESCITA — Durban / Worldwide</footer>
+</body>
+</html>
