@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TRACKY WMN — CHARACTER — CRESCITA</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Orbitron:wght@700&display=swap" rel="stylesheet">
+  <style>
+    :root { --black:#0a0a0a; --grey:#f5f5f5; }
+    * { box-sizing:border-box; margin:0; padding:0; }
+    body { font-family:'Montserrat',sans-serif; color:var(--black); background:#fff; }
+    header { padding:24px 5%; display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid #eee; }
+    .logo { font-family:'Orbitron',sans-serif; font-weight:700; letter-spacing:.14em; font-size:22px; text-decoration:none; color:var(--black); }
+    nav a { margin-left:24px; text-decoration:none; color:var(--black); font-size:14px; text-transform:uppercase; letter-spacing:.08em; }
+    .product { display:grid; grid-template-columns:1fr 1fr; gap:60px; max-width:1200px; margin:60px auto; padding:0 5%; }
+    .product img { width:100%; height:auto; background:var(--grey); }
+    h1 { font-family:'Orbitron',sans-serif; font-weight:700; letter-spacing:.12em; font-size:36px; margin-bottom:12px; text-transform:uppercase; }
+    .price { font-size:20px; margin-bottom:24px; }
+    .desc { line-height:1.7; color:#444; margin-bottom:32px; max-width:480px; }
+    .btns { display:flex; gap:12px; }
+    .btn { padding:14px 28px; font-size:13px; letter-spacing:.14em; text-transform:uppercase; cursor:pointer; border:1px solid var(--black); text-decoration:none; display:inline-block; }
+    .btn-primary { background:var(--black); color:#fff; }
+    .btn-secondary { background:#fff; color:var(--black); }
+    .meta { margin-top:40px; padding-top:20px; border-top:1px solid #eee; font-size:13px; color:#777; }
+    @media(max-width:900px){ .product{grid-template-columns:1fr;} }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="/index.html" class="logo">CRESCITA</a>
+    <nav>
+      <a href="/shop/index.html">Shop</a>
+      <a href="/index.html#manifesto">Manifesto</a>
+    </nav>
+  </header>
+  <main class="product">
+    <div>
+      <img src="/shop/products/white_w.png" alt="Tracky Wmn White">
+    </div>
+    <div>
+      <h1>TRACKY WMN — CHARACTER</h1>
+      <div class="price">R 5000</div>
+      <p class="desc">150gsm French Terry women's set. Soft hand, sharp silhouette. Character built in. Limited Drop 001.</p>
+      <div class="btns">
+        <a href="#" class="btn btn-primary">Add to Bag</a>
+        <a href="/shop/index.html" class="btn btn-secondary">Continue Shopping</a>
+      </div>
+      <div class="meta">Free delivery in SA over R1500 · Limited run · Ships in 2-3 days</div>
+    </div>
+  </main>
+</body>
+</html>
